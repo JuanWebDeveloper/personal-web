@@ -27,7 +27,14 @@ const AboutMe = () => {
             idea and I will make it come true.
           </p>
 
-          <button className="custom-default-btn">Download CV</button>
+          <a
+            href="https://juanwebdeveloper.github.io/curriculum/"
+            target="_blank"
+            rel="noreferrer"
+            className="custom-default-btn about-btn"
+          >
+            See CV
+          </a>
         </div>
 
         {/* hobbies */}

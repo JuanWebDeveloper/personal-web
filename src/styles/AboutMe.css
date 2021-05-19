@@ -31,6 +31,11 @@
   background: #192229;
 }
 
+.autograph-container .about-btn {
+  width: 300px;
+  text-align: center;
+}
+
 /*<|-Hobby Styles-|>*/
 .hobby-container {
   position: relative;
@@ -234,6 +239,10 @@
   /*<|-Autobiography Styles-|>*/
   .autograph-container h2 {
     font-size: 35px;
+  }
+
+  .autograph-container .about-btn {
+    width: 100%;
   }
 
   /*<|-Hobby Styles-|>*/

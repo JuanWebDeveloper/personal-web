@@ -66,6 +66,10 @@
 }
 
 @media screen and (max-width: 767px) {
+  .notFound-content .notFound-image {
+    height: 250px;
+  }
+
   .notFound-content .notFound-message p {
     font-size: 20px;
   }
