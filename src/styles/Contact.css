@@ -1,0 +1,212 @@
+.contact {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0%;
+  left: 0%;
+}
+
+.contact-information {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  overflow-x: hidden;
+  transform: translate(-50%, -50%);
+}
+
+.contact-information::after,
+.contact-information::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  top: 10%;
+  left: 0%;
+  clip-path: polygon(
+    0% 0%,
+    0% 100%,
+    25% 100%,
+    25% 25%,
+    75% 25%,
+    75% 75%,
+    25% 75%,
+    25% 100%,
+    100% 100%,
+    100% 0%
+  );
+  transform: rotate(30deg);
+  background: url(../images/contact/texture.jpg);
+  background-size: cover;
+  z-index: -1;
+}
+
+.contact-information::before {
+  top: 55%;
+  left: 85%;
+}
+
+.information {
+  display: grid;
+  position: relative;
+  width: 90%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 150px;
+  left: 5%;
+}
+
+.contact-information .fact {
+  position: relative;
+  margin: 10px;
+  border-radius: 15px;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  background: #1b2831;
+  transition: 0.5s all ease-in;
+}
+
+.contact-information .fact::before {
+  content: "";
+  position: absolute;
+  width: 98%;
+  height: 98%;
+  border-radius: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #1b2831;
+  transition: 0.5s all ease-in;
+  z-index: -1;
+}
+
+.contact-information .fact:hover::before {
+  box-shadow: inset -4px -4px 20px 0 rgb(27, 40, 49, 0.5),
+    inset 4px 4px 20px 0 rgba(0, 0, 0, 0.8);
+}
+
+.contact-information .fact:hover {
+  transform: translateY(-10px);
+}
+
+.contact-information .fact:nth-child(2) {
+  grid-row-start: span 2;
+}
+
+.contact-information .fact:nth-child(4) {
+  grid-row-start: span 2;
+}
+
+.contact-information .fact:nth-child(5) {
+  grid-row-start: span 2;
+}
+
+.contact-information .fact .fact-icon {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s all ease-in-out;
+}
+
+.contact-information .fact .fact-icon i {
+  font-size: 90px;
+}
+
+.contact-information .fact:nth-child(2) .fact-icon i {
+  color: #00acee;
+}
+
+.contact-information .fact:nth-child(3) .fact-icon i {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-information .fact:nth-child(4) .fact-icon i {
+  color: #0e76a8;
+}
+
+.contact-information .fact:nth-child(5) .fact-icon i {
+  color: #00bb2d;
+}
+
+.contact-information .contact-method-name {
+  position: absolute;
+  width: 90%;
+  height: 0;
+  border-radius: 15px;
+  top: 5%;
+  left: 5%;
+  overflow: hidden;
+  background: rgba(27, 40, 49, 0.8);
+  transition: all 0.5s ease-in;
+}
+
+.contact-information .contact-method-name::before {
+  content: "";
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  border-radius: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(27, 40, 49, 0.8);
+  transition: 0.5s all ease-in;
+  z-index: -1;
+}
+
+.contact-information .contact-method-name:hover::before {
+  box-shadow: inset -4px -4px 20px 0 rgba(27, 40, 49, 0.8),
+    inset 4px 4px 20px 0 rgba(0, 0, 0, 0.8);
+}
+
+.contact-information .contact-method-name h3 {
+  position: relative;
+  font-size: 30px;
+  text-transform: capitalize;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #d0d6d8;
+}
+
+.contact-information .fact:hover .contact-method-name {
+  height: 90%;
+}
+
+@media (max-width: 980px) {
+  .contact-information .fact {
+    grid-row-start: span 2;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contact-information {
+    height: 100%;
+  }
+
+  .contact-information::after,
+  .contact-information::before {
+    display: none;
+  }
+
+  .contact-information .fact {
+    margin: 0;
+    margin-bottom: 25px;
+    grid-column-start: span 5;
+  }
+}

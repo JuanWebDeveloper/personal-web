@@ -1,0 +1,256 @@
+.homePage {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0%;
+  left: 0%;
+}
+
+.home {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.home::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 90%;
+  background: url(../images/home.png);
+  background-size: cover;
+  top: 10%;
+  z-index: -1;
+}
+
+/*<|-Presentation Style-|>*/
+.text-welcome {
+  position: absolute;
+  width: 70%;
+  text-align: center;
+  top: 55%;
+  left: 5%;
+  transform: translate(0, -50%);
+}
+
+.text-welcome h2 {
+  text-shadow: 0 0 15px rgba(208, 214, 216, 0.5),
+    0 0 10px rgba(208, 214, 216, 0.5);
+}
+
+.photo-and-description {
+  display: flex;
+  position: relative;
+  width: 70%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  left: 15%;
+}
+
+.photo-and-description img {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #d0d6d8;
+}
+
+.photo-and-description .description {
+  position: relative;
+  width: 65%;
+}
+
+.text-welcome p {
+  padding-top: 10px;
+  text-align: left;
+}
+
+/*<|-Social Media Style-|>*/
+.social-media {
+  display: flex;
+  position: absolute;
+  width: 20%;
+  flex-direction: column;
+  align-items: flex-end;
+  top: 55%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
+
+.btn-network {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  margin: 20px 0;
+  border-radius: 20px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  overflow: hidden;
+  background: #fff;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-network:hover {
+  width: 200px;
+}
+
+.btn-network .icon {
+  display: inline-block;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  line-height: 80px;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  background: #fff;
+  transition: all 0.5s ease-in;
+}
+
+.btn-network .icon i {
+  position: relative;
+  font-size: 35px;
+  line-height: 70px;
+  transition: all 0.5s ease-in;
+}
+
+.btn-network:nth-child(1) .icon i {
+  color: #212121;
+}
+
+.btn-network:nth-child(2) .icon i {
+  color: #00acee;
+}
+
+.btn-network:nth-child(3) .icon i {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-network:nth-child(4) .icon i {
+  color: #0e76a8;
+}
+
+.btn-network .icon::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background: #fff;
+  border-radius: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn-network:hover .icon::before {
+  box-shadow: inset -4px -4px 20px 0 #fff,
+    inset 4px 4px 20px 0 rgba(0, 0, 0, 0.8);
+}
+
+.btn-network:hover .icon i {
+  font-size: 25px;
+}
+
+.btn-network:nth-child(1):hover {
+  background: #212121;
+}
+
+.btn-network:nth-child(2):hover {
+  background: #00acee;
+}
+
+.btn-network:nth-child(3):hover {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
+
+.btn-network:nth-child(4):hover {
+  background: #0e76a8;
+}
+
+.btn-network a {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 70px;
+  float: right;
+  padding-right: 20px;
+  margin-left: 10px;
+}
+
+/*<|-Responsive Design Start-|>*/
+@media screen and (max-width: 1199px) {
+  .home::after {
+    background-size: contain;
+  }
+
+  /*<|-Presentation Style-|>*/
+  .text-welcome {
+    width: 70%;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .photo-and-description {
+    width: 100%;
+    left: 0%;
+  }
+
+  /*<|-Social Media Style-|>*/
+  .social-media {
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 80%;
+    left: 50%;
+  }
+}
+
+@media (max-width: 980px) {
+  /*<|-Presentation Style-|>*/
+  .text-welcome {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /*<|-Presentation Style-|>*/
+  .text-welcome {
+    width: 90%;
+    top: 50%;
+  }
+
+  .photo-and-description img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .photo-and-description .description {
+    width: 100%;
+  }
+
+  /*<|-Social Media Style-|>*/
+  .social-media {
+    display: none;
+  }
+}

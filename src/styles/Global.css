@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap");
+
+/*<|-General Styles-|>*/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: #192229;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  color: #58b3f3;
+}
+
+h2 {
+  font-size: 50px;
+  text-transform: capitalize;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+h2 span {
+  color: #d0d6d8;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: #d0d6d8;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a,
+a:hover {
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  color: #d0d6d8;
+}
+
+/*<|-Button Styles-|>*/
+.custom-default-btn {
+  display: block;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  padding: 10px 60px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #d0d6d8;
+  background: #1083d5;
+  transition: 0.3s all ease-in;
+}
+
+.custom-default-btn::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  top: 50%;
+  left: 50%;
+  background: #1083d5;
+  transform: translate(-50%, -50%);
+  transition: 0.3s all ease-in;
+  z-index: -1;
+}
+
+.custom-default-btn:hover {
+  letter-spacing: 3px;
+  transform: translateY(-5px);
+  background: #1083d5;
+}
+
+.custom-default-btn:hover::before {
+  box-shadow: inset -4px -4px 20px 0 #1083d5,
+    inset 4px 4px 20px 0 rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 980px) {
+  h2 {
+    font-size: 35px;
+  }
+}
