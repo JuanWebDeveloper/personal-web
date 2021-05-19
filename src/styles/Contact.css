@@ -188,6 +188,7 @@
   height: 90%;
 }
 
+/*<|-Responsive Design Start-|>*/
 @media (max-width: 980px) {
   .contact-information .fact {
     grid-row-start: span 2;

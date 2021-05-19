@@ -11,19 +11,21 @@ import AboutMe from "./components/AboutMe";
 import Services from "./components/Services";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
     <BrowserRouter>
-      <Switch>
-        <Layout>
+      <Layout>
+        <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/AboutMe" component={AboutMe} />
           <Route exact path="/Services" component={Services} />
           <Route exact path="/Projects" component={Projects} />
           <Route exact path="/Contact" component={Contact} />
-        </Layout>
-      </Switch>
+          <Route component={NotFound} />
+        </Switch>
+      </Layout>
     </BrowserRouter>
   );
 }

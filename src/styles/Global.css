@@ -99,6 +99,7 @@ a:hover {
     inset 4px 4px 20px 0 rgba(0, 0, 0, 0.8);
 }
 
+/*<|-Responsive Design Start-|>*/
 @media (max-width: 980px) {
   h2 {
     font-size: 35px;

@@ -1,7 +1,7 @@
 import React from "react";
 
 import "../styles/HomePage.css";
-import personalPhoto from "../images/personalPhoto.png";
+import personalPhoto from "../images/homePage/personalPhoto.png";
 
 const HomePage = () => {
   return (

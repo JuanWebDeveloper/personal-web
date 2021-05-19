@@ -1,0 +1,77 @@
+.notFound {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0%;
+  left: 0%;
+}
+
+.notFound-content {
+  display: flex;
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 5%;
+  left: 5%;
+}
+
+.notFound-content .notFound-image {
+  position: relative;
+  width: 45%;
+  height: 350px;
+}
+
+.notFound-content .notFound-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.notFound-content .notFound-message {
+  position: relative;
+  width: 80%;
+}
+
+.notFound-content .notFound-message h2 {
+  font-size: 70px;
+}
+
+.notFound-content .notFound-message p {
+  font-size: 30px;
+  text-align: center;
+}
+
+.notFound-content .notFound-btn {
+  width: 35%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/*<|-Responsive Design Start-|>*/
+@media screen and (max-width: 1199px) {
+  .notFound-content .notFound-image {
+    width: 75%;
+    height: 500px;
+  }
+
+  .notFound-content .notFound-message {
+    width: 100%;
+  }
+
+  .notFound-content .notFound-btn {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .notFound-content .notFound-message p {
+    font-size: 20px;
+  }
+
+  .notFound-content .notFound-btn {
+    width: 100%;
+    font-size: 17px;
+  }
+}
