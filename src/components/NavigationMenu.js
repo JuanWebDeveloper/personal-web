@@ -41,7 +41,7 @@ const NavigationMenu = () => {
       <ul className="navigation" id="navigation">
         <li>
           <Link to="/" className="website-section active">
-            <span onClick={handleEffectActive}>Home Page</span>
+            <span onClick={handleEffectActive}>Home </span>
           </Link>
         </li>
         <li>
